@@ -129,16 +129,16 @@ void main() throws IOException {
 
     System.out.println();
 
-    // sortare dupa nume
+
     Collections.sort(studentiDinFisier, (s1, s2) -> s1.nume.compareTo(s2.nume));
 
-    // pregatire pentru scriere
+
     List<String> outLines = new ArrayList<>();
     for (Student s : studentiDinFisier) {
         outLines.add(s.toString());
     }
 
-    // scriere in fisier
+
     Files.write(outPath, outLines);
 
     System.out.println("Studentii sortati au fost salvati in fisier.");
