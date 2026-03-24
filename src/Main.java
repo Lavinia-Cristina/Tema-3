@@ -130,8 +130,8 @@ void main() throws IOException {
     System.out.println();
 
 
-    Collections.sort(studentiDinFisier, (s1, s2) -> s1.nume.compareTo(s2.nume));
-
+  Collections.sort(studentiDinFisier, (s1, s2) -> s1.nume.compareTo(s2.nume));
+//studenti.sort(Comparator.comparing(Student:: getFormatiedestudiu).thenComparing(Student:: getNume));
 
     List<String> outLines = new ArrayList<>();
     for (Student s : studentiDinFisier) {

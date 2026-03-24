@@ -13,7 +13,13 @@ public class Student {
         formatiedestudiu=formatiedestudiuintrodus;
 
     }
+    public String getNume(){
+        return this.nume;
+    }
 
+    public String getFormatiedestudiu(){
+        return this.formatiedestudiu;
+    }
     public String toString()
     {
         return "DATELE STUDENTILOR: " + "Numar matricol: " + numarMatricol + " , nume:" + nume + " , prenume:" + prenume + " , formatiedestudiu:" + formatiedestudiu;
