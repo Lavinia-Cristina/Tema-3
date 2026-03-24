@@ -100,7 +100,7 @@ void main() throws IOException {
 
     System.out.println("Rezultate cautare:");
     System.out.println("Alis Popa este in lista? " + studenti.contains( cautat1));
-    System.out.println("Maria Popa este in lista? " + studenti.contains( cautat1));
+    System.out.println("Maria Popa este in lista? " + studenti.contains( cautat2));
 //citire din fisier
 
     Path inPath = Paths.get("src/studenti_in.txt");
