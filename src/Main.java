@@ -144,6 +144,74 @@ void main() throws IOException {
     System.out.println("Studentii sortati au fost salvati in fisier.");
 
 
+
+
+
+
+    Map<Integer, Student> mapStudenti = new HashMap<>();
+    for (Student s : studentiDinFisier) {
+        mapStudenti.put(s.numarMatricol, s);
+    }
+
+
+    Path notePath = Paths.get("src/note_anon.txt");
+    if (Files.exists(notePath)) {
+        List<String> liniiNote = Files.readAllLines(notePath);
+        for (String linie : liniiNote) {
+            linie = linie.replace("\uFEFF", "").trim();
+            if (linie.isEmpty()) {
+                continue;
+            }
+
+            String[] parts = linie.split(",");
+            int idCitit = Integer.parseInt(parts[0].trim());
+            float notaCitita = Float.parseFloat(parts[1].trim());
+
+
+            Student studentCurent = mapStudenti.get(idCitit);
+            if (studentCurent != null) {
+                studentCurent.setNota(notaCitita);
+            }
+        }
+    } else {
+        System.out.println("Fisierul note_anon.txt nu a fost gasit!");
+    }
+
+    System.out.println("\n--- Studenti cu note alocate ---");
+
+    for (Student s : mapStudenti.values()) {
+        System.out.println(s);
+    }
+
+
+
+    System.out.println(" Cautare note in O(1)");
+
+    float notaM = gasesteNota("Bianca", "Popescu", mapStudenti); //
+    float notaN = gasesteNota("Ioan", "Mihalcea", mapStudenti);
+
+    System.out.println("Nota Bianca Popescu: " + notaM);
+    System.out.println("Nota Ioan Mihalcea: " + notaN);
 }
+
+
+public static float gasesteNota(String prenume, String nume, Map<Integer, Student> mapaInitiala) {
+    Map<String, Student> tineriFormatati = new HashMap<>();
+
+    for (Student s : mapaInitiala.values()) {
+        // Transformăm în litere mici pentru o potrivire sigură
+        String cheie = s.prenume.trim().toLowerCase() + "-" + s.nume.trim().toLowerCase();
+        tineriFormatati.put(cheie, s);
+    }
+
+    String cheieCautare = prenume.trim().toLowerCase() + "-" + nume.trim().toLowerCase();
+
+    if (tineriFormatati.containsKey(cheieCautare)) {
+        return tineriFormatati.get(cheieCautare).nota;
+    }
+
+    return 0f;
+}
+
 
 

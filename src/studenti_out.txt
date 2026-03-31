@@ -1,6 +1,6 @@
-DATELE STUDENTILOR: Numar matricol: 1026 , nume:Anamaria , prenume:Prodan , formatiedestudiu:TI131/1
-DATELE STUDENTILOR: Numar matricol: 1025 , nume:Andrei , prenume:Popa , formatiedestudiu:ISM141/2
-DATELE STUDENTILOR: Numar matricol: 1026 , nume:Bianca , prenume:Popescu , formatiedestudiu:TI131/2
-DATELE STUDENTILOR: Numar matricol: 1024 , nume:Ioan , prenume:Mihalcea , formatiedestudiu:ISM141/1
-DATELE STUDENTILOR: Numar matricol: 1028 , nume:Mihai , prenume:Ionescu , formatiedestudiu:TI132/2
-DATELE STUDENTILOR: Numar matricol: 1027 , nume:Paul , prenume:Mohanu , formatiedestudiu:TI132/1
+DATELE STUDENTILOR: Numar matricol: 1026 , nume:Anamaria , prenume:Prodan , formatiedestudiu:TI131/1nota0.0
+DATELE STUDENTILOR: Numar matricol: 1025 , nume:Andrei , prenume:Popa , formatiedestudiu:ISM141/2nota0.0
+DATELE STUDENTILOR: Numar matricol: 1026 , nume:Bianca , prenume:Popescu , formatiedestudiu:TI131/2nota0.0
+DATELE STUDENTILOR: Numar matricol: 1024 , nume:Ioan , prenume:Mihalcea , formatiedestudiu:ISM141/1nota0.0
+DATELE STUDENTILOR: Numar matricol: 1028 , nume:Mihai , prenume:Ionescu , formatiedestudiu:TI132/2nota0.0
+DATELE STUDENTILOR: Numar matricol: 1027 , nume:Paul , prenume:Mohanu , formatiedestudiu:TI132/1nota0.0

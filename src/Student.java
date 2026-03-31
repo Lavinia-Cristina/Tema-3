@@ -4,6 +4,7 @@ public class Student {
     String nume;
     String prenume;
     String formatiedestudiu;
+    float nota;
 
     Student ( int numarmatricolintrodus, String numeintrodus,String prenumeintrodus,String formatiedestudiuintrodus)
     {
@@ -12,6 +13,9 @@ public class Student {
         prenume=prenumeintrodus;
         formatiedestudiu=formatiedestudiuintrodus;
 
+    }
+    public void setNota(float nota) {
+        this.nota = nota;
     }
     public String getNume(){
         return this.nume;
@@ -22,7 +26,7 @@ public class Student {
     }
     public String toString()
     {
-        return "DATELE STUDENTILOR: " + "Numar matricol: " + numarMatricol + " , nume:" + nume + " , prenume:" + prenume + " , formatiedestudiu:" + formatiedestudiu;
+        return "DATELE STUDENTILOR: " + "Numar matricol: " + numarMatricol + " , nume:" + nume + " , prenume:" + prenume + " , formatiedestudiu:" + formatiedestudiu + "nota" + nota;
 
     }
 
