@@ -195,8 +195,7 @@ public class Main {
                 new Student(1034,"Andrei","Dobrescu","TI131/2", 2.22)
         );
 
-        IStudentiExport strategyConsole =
-                new StudentiInConsola();
+        IStudentiExport strategyConsole = new StudentiInConsola();
 
         Exporter exporter = new Exporter();
 
