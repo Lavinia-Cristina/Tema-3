@@ -6,7 +6,7 @@ public class StudentBursier extends Student {
 
     public StudentBursier(int numarMatricol, String nume, String prenume, String formatiedestudiu, double nota, double cuantumBursa) {
 
-        super(numarMatricol, nume, prenume, formatiedestudiu);
+        super(numarMatricol, nume, prenume, formatiedestudiu, 8.70);
 
         this.setNota((float) nota);
         this.cuantumBursa = cuantumBursa;

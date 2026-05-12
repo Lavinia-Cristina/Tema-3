@@ -6,7 +6,7 @@ public class Student {
     String formatiedestudiu;
     float nota;
 
-    Student ( int numarmatricolintrodus, String numeintrodus,String prenumeintrodus,String formatiedestudiuintrodus)
+    Student (int numarmatricolintrodus, String numeintrodus, String prenumeintrodus, String formatiedestudiuintrodus, double v)
     {
         numarMatricol=numarmatricolintrodus;
         nume=numeintrodus;

@@ -9,7 +9,7 @@ public class Main {
         System.out.print("Clasa da aceste date: ");
         System.out.println();
 
-        Student stud1 = new Student(527, "Botea", "Lavinia", "ISM21/2");
+        Student stud1 = new Student(527, "Botea", "Lavinia", "ISM21/2", 8.70);
         System.out.println(stud1);
         System.out.println();
         System.out.println();
@@ -69,17 +69,17 @@ public class Main {
 
         // Partea Student
         List<Student> studenti = new ArrayList<>();
-        studenti.add(new Student(101, "Popescu", "Ion", "TI21/1"));
-        studenti.add(new Student(120, "Popa", "Alis", "TI21/2")); // Studentul de la b)
-        studenti.add(new Student(105, "Ionescu", "Dan", "TI21/1"));
+        studenti.add(new Student(101, "Popescu", "Ion", "TI21/1", 8.70));
+        studenti.add(new Student(120, "Popa", "Alis", "TI21/2", 8.70)); // Studentul de la b)
+        studenti.add(new Student(105, "Ionescu", "Dan", "TI21/1", 8.70));
 
         System.out.println("Lista de studenti:");
         for (Student s : studenti) {
             System.out.println(s);
         }
 
-        Student cautat1 = new Student(120, "Popa", "Alis", "TI21/2");
-        Student cautat2 = new Student(112, "Popa", "Maria", "TI21/1");
+        Student cautat1 = new Student(120, "Popa", "Alis", "TI21/2", 8.70);
+        Student cautat2 = new Student(112, "Popa", "Maria", "TI21/1", 8.70);
 
         System.out.println("Rezultate cautare:");
         System.out.println("Alis Popa este in lista? " + studenti.contains(cautat1));
@@ -100,7 +100,7 @@ public class Main {
             String prenume = parts[2].trim();
             String grupa = parts[3].trim();
 
-            studentiDinFisier.add(new Student(id, nume, prenume, grupa));
+            studentiDinFisier.add(new Student(id, nume, prenume, grupa, 8.70));
         }
 
         System.out.println("Studenti cititi din fisier:");
@@ -176,6 +176,33 @@ public class Main {
         salveazaInFisier("src/bursieri_out.txt", bursieri);
         System.out.println("Lista de bursieri a fost salvata cu succes in 'src/bursieri_out.txt'.");
 
+
+        //LAB 10
+        IO.println("                                    ");
+        IO.println("                                    ");
+        IO.println("                                    ");
+        IO.println("                                    ");
+
+        List<Student> students = Arrays.asList(
+                new Student(1025,"Andrei","Popa","ISM141/2", 8.70),
+                new Student(1024,"Ioan","Mihalcea","ISM141/1", 10),
+                new Student(1026,"Anamaria","Prodan","TI131/1", 8.90),
+                new Student(1029,"Bianca","Popescu","TI131/1", 10),
+                new Student(1030,"Maria","Pana","TI131/2", 4.10),
+                new Student(1031,"Gabriela","Mohanu","TI131/2", 7.33),
+                new Student(1032,"Marius","Nasta","TI131/2", 3.20),
+                new Student(1033,"Marius","Nasta","TI131/1", 5.12),
+                new Student(1034,"Andrei","Dobrescu","TI131/2", 2.22)
+        );
+
+        IStudentiExport strategyConsole =
+                new StudentiInConsola();
+
+        Exporter exporter = new Exporter();
+
+        exporter.startExport(strategyConsole, students);
+
+
     }
 
 
@@ -208,5 +235,6 @@ public class Main {
 
         Files.write(path, linii);
     }
+
 
 }
