@@ -172,7 +172,7 @@ public class Main {
             System.out.println(b);
         }
 
-        // Salvarea listei in fisier
+
         salveazaInFisier("src/bursieri_out.txt", bursieri);
         System.out.println("Lista de bursieri a fost salvata cu succes in 'src/bursieri_out.txt'.");
 
@@ -182,15 +182,32 @@ public class Main {
         IO.println("                                    ");
         IO.println("                                    ");
         IO.println("                                    ");
-
+        IO.println("LABORATOR 10");
+        IO.println("                                    ");
         AplicatieCuStrategy app = new AplicatieCuStrategy();
-
-        IStudentiExport strategyConsole = new StudentiInConsola();
-
         Exporter exporter = new Exporter();
 
+        System.out.println("\n--- Export la Consola ---");
+        IStudentiExport strategyConsole = new StudentiInConsola();
         exporter.startExport(strategyConsole, app.studenti);
 
+        System.out.println("\n--- Export in Fisier TXT ---");
+        IStudentiExport strategyTxt = new StudentiInFiserText();
+        exporter.startExport(strategyTxt, app.studenti);
+
+        System.out.println("\n--- Export in Fisier XLSX ---");
+        IStudentiExport strategyXlsx = new StudentiInFisierXlsx();
+        exporter.startExport(strategyXlsx, app.studenti);
+
+        Importer importer = new Importer();
+
+        System.out.println("\n--- Import din Fisier TXT ---");
+        IStudentiImport importTxt = new StudentiDinFiserText();
+        List<Student> studentiImportati = importer.startImport(importTxt, "src/studenti_in.txt");
+
+        System.out.println("\n--- Import din Fisier XLSX ---");
+        IStudentiImport importXlsx = new StudentiDinFiserXlsx();
+        importer.startImport(importXlsx, "fisier_inexistent.xlsx");
 
     }
 

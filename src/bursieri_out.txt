@@ -1,4 +1,4 @@
-DATELE STUDENTILOR: Numar matricol: 1025 , nume:Andrei , prenume:Popa , formatiedestudiu:ISM141/2nota8.7 , cuantum bursa: 725.5
-DATELE STUDENTILOR: Numar matricol: 1024 , nume:Ioan , prenume:Mihalcea , formatiedestudiu:ISM141/1nota9.8 , cuantum bursa: 801.1
-DATELE STUDENTILOR: Numar matricol: 1026 , nume:Anamaria , prenume:Prodan , formatiedestudiu:TI131/1nota8.9 , cuantum bursa: 745.5
-DATELE STUDENTILOR: Numar matricol: 1029 , nume:Bianca , prenume:Popescu , formatiedestudiu:TI131/1nota9.1 , cuantum bursa: 780.8
+DATELE STUDENTILOR: Numar matricol: 1025 , nume:Andrei , prenume:Popa , formatiedestudiu:ISM141/2nota 8.7 , cuantum bursa: 725.5
+DATELE STUDENTILOR: Numar matricol: 1024 , nume:Ioan , prenume:Mihalcea , formatiedestudiu:ISM141/1nota 9.8 , cuantum bursa: 801.1
+DATELE STUDENTILOR: Numar matricol: 1026 , nume:Anamaria , prenume:Prodan , formatiedestudiu:TI131/1nota 8.9 , cuantum bursa: 745.5
+DATELE STUDENTILOR: Numar matricol: 1029 , nume:Bianca , prenume:Popescu , formatiedestudiu:TI131/1nota 9.1 , cuantum bursa: 780.8

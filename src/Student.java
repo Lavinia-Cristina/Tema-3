@@ -12,6 +12,7 @@ public class Student {
         nume=numeintrodus;
         prenume=prenumeintrodus;
         formatiedestudiu=formatiedestudiuintrodus;
+        this.nota = (float) v;
 
     }
     public void setNota(float nota) {
@@ -26,7 +27,7 @@ public class Student {
     }
     public String toString()
     {
-        return "DATELE STUDENTILOR: " + "Numar matricol: " + numarMatricol + " , nume:" + nume + " , prenume:" + prenume + " , formatiedestudiu:" + formatiedestudiu + "nota" + nota;
+        return "DATELE STUDENTILOR: " + "Numar matricol: " + numarMatricol + " , nume:" + nume + " , prenume:" + prenume + " , formatiedestudiu:" + formatiedestudiu + "nota " + nota;
 
     }
 
