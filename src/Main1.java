@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.*;
 
-public class Main {
+public class Main1 {
 
     public static void main(String[] args) throws IOException {
         // LAB1
@@ -241,6 +241,8 @@ public class Main {
 
         Files.write(path, linii);
     }
+
+
 
 
 }
