@@ -8,4 +8,9 @@ public class StudentiInConsola implements IStudentiExport {
             System.out.println(s);
         }
     }
+
+    @Override
+    public void exportData(List<Student> studenti) {
+
+    }
 }

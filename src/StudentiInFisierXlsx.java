@@ -7,4 +7,9 @@ public class StudentiInFisierXlsx implements IStudentiExport {
 
         System.out.println("Exportul a " + students.size() + " studenti s-a realizat in format XLSX.");
     }
+
+    @Override
+    public void exportData(List<Student> studenti) {
+
+    }
 }

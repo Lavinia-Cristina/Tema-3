@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.*;
 
-public class Main {
+public class Main1 {
 
     public static void main(String[] args) throws IOException {
         // LAB1
@@ -192,8 +192,8 @@ public class Main {
         exporter.startExport(strategyConsole, app.studenti);
 
         System.out.println("\n--- Export in Fisier TXT ---");
-        IStudentiExport strategyTxt = new StudentiInFiserText();
-        exporter.startExport(strategyTxt, app.studenti);
+        //IStudentiExport strategyTxt = new StudentiInFiserText();
+        //exporter.startExport(strategyTxt, app.studenti);
 
         System.out.println("\n--- Export in Fisier XLSX ---");
         IStudentiExport strategyXlsx = new StudentiInFisierXlsx();
@@ -208,6 +208,20 @@ public class Main {
         System.out.println("\n--- Import din Fisier XLSX ---");
         IStudentiImport importXlsx = new StudentiDinFiserXlsx();
         importer.startImport(importXlsx, "fisier_inexistent.xlsx");
+
+
+
+        //LAB 11
+
+
+        IStudentiExport[] strategies = new IStudentiExport[0];
+        for (IStudentiExport strategy : strategies) {
+            List<Student> studentiCuNote = List.of();
+            TimeExecutionDecorator decorator = new TimeExecutionDecorator(strategy, studentiCuNote);
+            Long time = decorator.executionTime();
+
+            System.out.println("Execution time: " + time + " for strategy " + strategy.getClass().getSimpleName());
+        }
 
     }
 
@@ -241,6 +255,8 @@ public class Main {
 
         Files.write(path, linii);
     }
+
+
 
 
 }
